@@ -1,0 +1,11 @@
+check process <%= @worker_name %>
+  with pidfile <%= @tmp_path %>/pids/delayed_job.<%= @index %>.pid
+  group dj_<%= @app_name %>
+  group <%= @app_name %>
+  group delayed_job
+
+  start program = "/bin/su <%= @user %> -l && /bin/bash -c 'cd <%= @app_path %>; RAILS_ENV=<%= @rails_env %> /data/bin/rbenv-exec bundle exec bin/delayed_job start -i <%= @index %>'"
+  stop program = "/bin/su <%= @user %> -l && /bin/bash -c 'cd <%= @app_path %>; RAILS_ENV=<%= @rails_env %> /data/bin/rbenv-exec bundle exec bin/delayed_job stop -i <%= @index %>'"
+  if 2 restarts within 15 cycles then timeout
+  if totalmem is greater than 300 MB then restart # eating up memory?
+
