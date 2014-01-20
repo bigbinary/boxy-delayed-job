@@ -1,5 +1,3 @@
-
-include_recipe 'apt'
 include_recipe 'monit'
 include_recipe 'rbenv'
 
