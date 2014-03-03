@@ -4,8 +4,16 @@ check process <%= @worker_name %>
   group <%= @app_name %>
   group delayed_job
 
-  start program = "/bin/su <%= @user %> -l && /bin/bash -c 'cd <%= @app_path %>; RAILS_ENV=<%= @rails_env %> /data/bin/rbenv-exec bundle exec bin/delayed_job start -i <%= @index %>'"
-  stop program = "/bin/su <%= @user %> -l && /bin/bash -c 'cd <%= @app_path %>; RAILS_ENV=<%= @rails_env %> /data/bin/rbenv-exec bundle exec bin/delayed_job stop -i <%= @index %>'"
+<%
+  setup_runner =
+    "if [ -f bin/delayed_job ]; then RUNNER='bin/delayed_job'; else RUNNER='script/delayed_job'; fi"
+  setup_env = "RAILS_ENV=#{@rails_env} /data/bin/rbenv-exec bundle exec"
+  dj_command = ->(command) do
+    "'cd #{@app_path}; #{setup_runner}; #{setup_env} $RUNNER #{command} -i #{@index}'"
+  end
+%>
+  start program = "/bin/su <%= @user %> -l && /bin/bash -c <%= dj_command.call('start') %>"
+  stop program = "/bin/su <%= @user %> -l && /bin/bash -c <%= dj_command.call('stop') %>"
   if 2 restarts within 15 cycles then timeout
   if totalmem is greater than 300 MB then restart # eating up memory?
 
