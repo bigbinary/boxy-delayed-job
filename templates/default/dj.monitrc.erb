@@ -6,7 +6,7 @@ check process <%= @worker_name %>
 
 <%
   setup_runner =
-    "if [ -f bin/delayed_job ]; then RUNNER='bin/delayed_job'; else RUNNER='script/delayed_job'; fi"
+    'if [ -f bin/delayed_job ]; then RUNNER=\"bin/delayed_job\"; else RUNNER=\"script/delayed_job\"; fi'
   setup_env = "RAILS_ENV=#{@rails_env} /data/bin/rbenv-exec bundle exec"
   dj_command = ->(command) do
     "'cd #{@app_path}; #{setup_runner}; #{setup_env} $RUNNER #{command} -i #{@index}'"
