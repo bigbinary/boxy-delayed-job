@@ -14,5 +14,5 @@ check process <%= @worker_name %>
   start program = "/bin/su <%= @user %> -l -c <%= dj_command.call('start') %>"
   stop program = "/bin/su <%= @user %> -l -c <%= dj_command.call('stop') %>"
   if 2 restarts within 15 cycles then timeout
-  if totalmem is greater than 300 MB then restart # eating up memory?
+  if totalmem is greater than 300 MB then restart
 

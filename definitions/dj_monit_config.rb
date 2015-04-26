@@ -1,5 +1,7 @@
 define :dj_monit_config do
   params[:name].each do |application_options|
+    next if application_options[:name] == 'example'
+
     application_options['background_workers'].times do |i|
 
       options = {

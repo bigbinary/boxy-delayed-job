@@ -1,45 +1,19 @@
 delayed_job Cookbook
 ====================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
+Installs and configures delayed_job and monit config for DJ workers.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - delayed_job needs toaster to brown your bagel.
+See metadata
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
-
-e.g.
-#### delayed_job::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['delayed_job']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+See attributes
 
 Usage
 -----
 #### delayed_job::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
 Just include `delayed_job` in your node's `run_list`:
 
 ```json
@@ -53,20 +27,10 @@ Just include `delayed_job` in your node's `run_list`:
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write you change
 4. Write tests for your change (if applicable)
 5. Run the tests, ensuring they all pass
 6. Submit a Pull Request using Github
-
-License and Authors
--------------------
-Authors: TODO: List authors
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jetthoughts/delayed_job_cookbook/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
