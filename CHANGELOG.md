@@ -1,13 +1,10 @@
 delayed_job CHANGELOG
 =====================
 
-This file is used to list changes made in each version of the delayed_job cookbook.
+0.1.1
+-----
+- vipulnsward - Revamped to use boxy-rails
 
 0.1.0
 -----
-- [your_name] - Initial release of delayed_job
-
-- - -
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
-
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.
+- miry - Initial release of delayed_job

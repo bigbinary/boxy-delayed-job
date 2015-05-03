@@ -1,10 +1,10 @@
 name             'delayed_job'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
-license          'All rights reserved'
+maintainer_email 'vipul@bigbinary.com'
+license          'MIT'
 description      'Installs/Configures delayed_job'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.1'
 
 depends          'monit'
 depends          'rbenv'
+depents          'boxy-rails'
