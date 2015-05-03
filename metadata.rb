@@ -7,4 +7,4 @@ version          '0.1.1'
 
 depends          'monit'
 depends          'rbenv'
-depents          'boxy-rails'
+depends          'boxy-rails'
