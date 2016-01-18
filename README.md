@@ -34,3 +34,8 @@ Contributing
 4. Write tests for your change (if applicable)
 5. Run the tests, ensuring they all pass
 6. Submit a Pull Request using Github
+
+Brought to you by
+-----------------
+
+[![BigBinary logo](http://bigbinary.com/assets/common/logo.png)](http://BigBinary.com)
