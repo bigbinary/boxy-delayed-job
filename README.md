@@ -38,4 +38,4 @@ Contributing
 Brought to you by
 -----------------
 
-[![BigBinary logo](http://bigbinary.com/assets/common/logo.png)](http://BigBinary.com)
+<a href='http://BigBinary.com'><img src="https://s3.amazonaws.com/bigbinary-media/horizontal/logo_blue.png" width="200px"/></a>
