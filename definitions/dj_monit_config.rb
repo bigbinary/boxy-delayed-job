@@ -11,7 +11,8 @@ define :dj_monit_config do
           app_path:    "#{node['boxy-rails']['data_path']}/apps/#{application_options[:name]}/current",
           tmp_path:    "#{node['boxy-rails']['data_path']}/apps/#{application_options[:name]}/shared/tmp",
           worker_name: "#{application_options[:name]}_delayed_job_#{i+1}",
-          index:       i
+          index:       i,
+          monit_slack_alerts: "#{node['boxy-rails']['monit_slack_alerts']}"
       }
 
       monitrc options[:worker_name] do
